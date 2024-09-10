@@ -24,14 +24,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 20vh;
         gap: 10px;
-        padding: 10px;
+        padding: 40px 10px;
     }
     iframe {
     position: fixed;
     width: 100%;
     height: 80vh;
-    bottom: 0;
     border: 2px solid #d9d9d9;
     border-radius: 2px;
     }
@@ -43,10 +43,11 @@
         <h2>Visualize WhatsApp Widget on Your Website</h2>
         <div class="form">
             <label for="website-url">Enter your website URL:
-            <input type="text" id="website-url" placeholder="https://example.com" value="https://"/>
+            <input type="text" id="website-url" placeholder="https://example.com"/>
             </label>
             <button onclick="loadWebsite()">Load Website</button>
         </div>
+        <p>If your website has certain security settings (like X-Frame-Options headers), it might block from loading it.</p>
     </div>
   
     <iframe id="website-frame" src="https://iammunendrasingh.github.io/iframeweb/" frameborder="0"></iframe>
