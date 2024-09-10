@@ -28,8 +28,10 @@
         padding: 10px;
     }
     iframe {
+    position: fixed;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
+    bottom: 0;
     border: 2px solid #d9d9d9;
     border-radius: 2px;
     }
@@ -41,13 +43,13 @@
         <h2>Visualize WhatsApp Widget on Your Website</h2>
         <div class="form">
             <label for="website-url">Enter your website URL:
-            <input type="text" id="website-url" placeholder="https://example.com" />
+            <input type="text" id="website-url" placeholder="https://example.com" value="https://"/>
             </label>
             <button onclick="loadWebsite()">Load Website</button>
         </div>
     </div>
   
-    <iframe id="website-frame" src="https://iframeweb.com" frameborder="0"></iframe>
+    <iframe id="website-frame" src="https://iammunendrasingh.github.io/iframeweb/" frameborder="0"></iframe>
   
     <script>
         var url = 'https://cdn.jsdelivr.net/gh/iammunendrasingh/iframeweb@main/whatsapp-widget/main.js';
