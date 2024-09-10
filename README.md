@@ -19,5 +19,4 @@ This repository contains various JavaScript tools by [iframeweb](https://iframew
 ### 5. Background Foreground HEX Color Tester
    - Test color combinations for web design to ensure contrast and readability.
 
-### 6. What is My IP Address Location Checker
-   - Get details on your IP address and geographical location.
+More tools can be found at <a href="https://iframeweb.com/tools">iFrameWeb - Tools</a>
