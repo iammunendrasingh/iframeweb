@@ -1,41 +1,88 @@
 <head>
-<script>
-var url = 'https://cdn.jsdelivr.net/gh/iammunendrasingh/iframeweb@main/whatsapp-widget/main.js';
-var s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = url;
-    var options = {
-    "enabled": true,
-    "chatButtonSetting": {
-        "backgroundColor": "#4DC247",
-        "ctaText": "WhatsApp Us",
-        "borderRadius": "25",
-        "marginLeft": "",
-        "marginBottom": "30",
-        "marginRight": "30",
-        "position": "right"
-    },
-    "brandSetting": {
-        "brandName": "iFrameWeb Solutions",
-        "brandSubTitle": "Typically replies within 24 hrs",
-        "brandImg": "https://iframeweb.com/wp-content/uploads/2023/10/iframeweb-logo.jpg",
-        "welcomeText": "Hi there!\nHow can we help you?",
-        "messageText": "Hello, I have a question about {{page_link}}",
-        "backgroundColor": "#404145",
-        "ctaText": "Start Chat",
-        "borderRadius": "25",
-        "autoShow": false,
-        "phoneNumber": "918851730877"
+    <script>
+      function loadWebsite() {
+        const websiteURL = document.getElementById('website-url').value;
+        if (websiteURL) {
+          document.getElementById('website-frame').src = websiteURL;
+        }
+      }
+    </script>
+  
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0 0;
+        width: calc(100% - 3px);
     }
-};
-    s.onload = function() {
-        CreateWhatsappChatWidget(options);
-    };
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(s, x);
-</script>  
-</head>
-<div style="display:flex; justify-content:center;align-content:center;height:100vh;">
-  <h2>This is the demo of how the whatsapp widget will be shown on your website</h2>
-</div>
+    input, button {
+    margin: 10px 0;
+    padding: 8px;
+    font-size: 16px;
+    }
+    .website-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+    iframe {
+    width: 100%;
+    height: 90vh;
+    border: 2px solid #d9d9d9;
+    border-radius: 10px;
+    }
+    </style>
+  </head>
+  
+  <body>
+    <div class="website-form">
+        <h2>Visualize WhatsApp Widget on Your Website</h2>
+        <div class="form">
+            <label for="website-url">Enter your website URL:
+            <input type="text" id="website-url" placeholder="https://example.com" />
+            </label>
+            <button onclick="loadWebsite()">Load Website</button>
+        </div>
+    </div>
+  
+    <iframe id="website-frame" src="https://iframeweb.com" frameborder="0"></iframe>
+  
+    <script>
+        var url = 'https://cdn.jsdelivr.net/gh/iammunendrasingh/iframeweb@main/whatsapp-widget/main.js';
+        var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url;
+            var options = {
+            "enabled": true,
+            "chatButtonSetting": {
+                "backgroundColor": "#4DC247",
+                "ctaText": "WhatsApp Us",
+                "borderRadius": "25",
+                "marginLeft": "",
+                "marginBottom": "30",
+                "marginRight": "30",
+                "position": "right"
+            },
+            "brandSetting": {
+                "brandName": "iFrameWeb Solutions",
+                "brandSubTitle": "Typically replies within 24 hrs",
+                "brandImg": "https://iframeweb.com/wp-content/uploads/2023/10/iframeweb-logo.jpg",
+                "welcomeText": "Hi there!\nHow can we help you?",
+                "messageText": "Hello, I have a question about {{page_link}}",
+                "backgroundColor": "#404145",
+                "ctaText": "Start Chat",
+                "borderRadius": "25",
+                "autoShow": false,
+                "phoneNumber": "918851730877"
+            }
+        };
+            s.onload = function() {
+                CreateWhatsappChatWidget(options);
+            };
+            var x = document.getElementsByTagName('head')[0];
+            x.parentNode.insertBefore(s, x);
+        </script>
+  </body>
